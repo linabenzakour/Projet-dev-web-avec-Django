@@ -1,0 +1,12 @@
+{% extends 'aviation/base.html' %}
+
+{% block content %}
+    <h1>Détails de l'aeroport: {{ aeroport.id_aeroport }}</h1>
+    <p>Capacite: {{ aeroport.capacite }}</p>
+    <a href="{% url 'modify_aeroport' aeroport.id_aeroport %}" class="cta">Modifier cet aeroport</a>
+    <p>  
+        
+    <a href="{% url 'delete_aeroport' id_aeroport=aeroport.id_aeroport %}" class="cta">Supprimer</a>
+    <a href="{% url 'base' %}" class="cta">Retour à la liste des aeroports</a>
+
+{% endblock %}

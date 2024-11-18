@@ -1,0 +1,10 @@
+{% extends 'aviation/base.html' %}
+
+{% block content %}
+<h2>Modifier l'Aéroport {{ aeroport.id_aeroport }}</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}  
+    <button type="submit" class="cta">Enregistrer les modifications</button>
+</form>
+{% endblock %}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/aviation.css' %}">
+
+    <title>À propos</title>
+</head>
+
+
+    <header>
+        <header class="header">
+            <nav>
+                <a href="base.html" class="icone">
+                    <img src="../../static/assets/logo.jpg" alt="Logo" />
+                </a>
+                <div>
+                    <a href="{% url 'base' %}">Accueil</a>
+                    <a href="{% url 'a_propos' %}">À propos</a>
+                </div>
+            </nav>
+        </header>
+        <h1>À propos du projet</h1>
+    </header>
+
+    <body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="{% static 'videos/video.mp4' %}" type="video/mp4">
+            Votre navigateur ne prend pas en charge la vidéo.
+        </video>
+    </div>
+<div class="content">
+    <div class="container">
+        <div class="content">
+            <h2>Projet réalisé à l'école Centrale Méditerranée</h2>
+            <p>
+                Ce site a été conçu dans le cadre d'un projet académique à l'école d'ingénieurs <strong>Centrale Méditerranée</strong>,
+                plus précisément dans le cadre du cours <strong>Informatique : Data Driven</strong>. L'objectif principal de ce projet était
+                de développer une application web à l'aide de Django.
+            </p>
+
+            <p>
+                Le projet se concentre sur l'utilisation des technologies web pour la gestion des données, en mettant l'accent sur
+                l'analyse et la manipulation des données dans un environnement de développement orienté vers le <em>Data Driven</em>.
+            </p>
+
+            <p>
+                Les principales compétences abordées pendant ce projet incluent l'utilisation des frameworks Django pour le backend,
+                ainsi que l'implémentation de bases de données pour gérer les informations des utilisateurs et des entités du projet.
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+    <footer>
+        <p>&copy; 2024 Projet réalisé par BENZAKOUR Lina</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/aviation.css' %}">
+
+    <title>Aéroport Plein</title>
+</head>
+<body>
+    <h1>L'aéroport est plein, vous ne pouvez pas ajouter d'avion ici.</h1>
+    <a href="{% url 'base' %}" >Retour à la liste des avions</a>
+</body>
+</html>

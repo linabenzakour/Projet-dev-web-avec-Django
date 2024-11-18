@@ -1,0 +1,23 @@
+<h1>Ajouter un avion</h1>
+
+{% if erreur %}
+<p style="color: red;">{{ erreur }}</p>
+{% endif %}
+
+<form method="POST">
+    {% csrf_token %}
+    <label for="id_avion">ID de l'avion :</label>
+    <input type="text" name="id_avion" id="id_avion" required><br>
+
+    <label for="compagnie">Compagnie aérienne :</label>
+    <input type="text" name="compagnie" id="compagnie" required><br>
+
+    <label for="aeroport">Aéroport :</label>
+    <select name="aeroport" id="aeroport">
+        {% for aeroport in aeroports %}
+        <option value="{{ aeroport.id_aeroport }}">{{ aeroport.id_aeroport }}</option>
+        {% endfor %}
+    </select><br>
+
+    <button type="submit" class="cta">Ajouter</button>
+</form>

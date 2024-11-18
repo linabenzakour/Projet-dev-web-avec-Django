@@ -1,0 +1,17 @@
+{% extends 'aviation/base.html' %}
+
+{% block content %}
+<h2>Modifier l'Équipe {{ avion.id_avion }}</h2>
+
+{% if erreur %}
+    <div class="alert alert-danger">
+        {{ erreur }}
+    </div>
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="cta">Enregistrer les modifications</button>
+</form>
+
+{% endblock %}

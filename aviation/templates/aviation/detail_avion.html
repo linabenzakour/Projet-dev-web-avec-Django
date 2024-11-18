@@ -1,0 +1,13 @@
+{% extends 'aviation/base.html' %}
+
+{% block content %}
+    <h1>Détails de l'avion: {{ avion.id_avion }}</h1>
+    <p>compagnie_aerienne: {{ avion.compagnie_aerienne }}</p>
+    <p>situation: {{ avion.situation }}</p>
+
+    
+    <a href="{% url 'modify_avion' id_avion=avion.id_avion %}" class="cta">Modifier cet avion</a>
+    <p><a href="{% url 'delete_avion' id_avion=avion.id_avion %}" class="cta">Supprimer cet avion</a></p>
+    <a href="{% url 'base' %}" class="cta">Retour à la liste des avions</a>
+
+{% endblock %}
